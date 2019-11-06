@@ -1,0 +1,23 @@
+{
+  "name": "credit-card-form",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Alexander996/credit-card-form.git",
+  "author": "Alexander Smirnov <al.smirnov996@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0",
+    "eslint-plugin-react": "7.16.0",
+    "parcel-bundler": "1.12.4",
+    "sass": "1.23.3"
+  }
+}
