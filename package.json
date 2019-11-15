@@ -8,9 +8,11 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "lint": "eslint src"
+    "lint": "eslint 'src/**/*.{js,jsx}'"
   },
   "dependencies": {
+    "classnames": "2.2.6",
+    "prop-types": "15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0"
   },

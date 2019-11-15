@@ -4,3 +4,31 @@
   border-radius: 10px;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
 }
+
+.card-form__row {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.card-form__group {
+  display: flex;
+  align-items: flex-end;
+  width: 315px;
+
+  & > *:not(:first-child) {
+    margin-left: 15px;
+  }
+}
+
+.card-form__cvv {
+  width: 150px;
+  margin-left: 35px;
+}
+
+.card-form__button {
+  width: 100%;
+  margin-top: 20px;
+}

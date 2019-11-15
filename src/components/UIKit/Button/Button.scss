@@ -1,0 +1,23 @@
+$buttonBackgroundColor: #2364d2;
+
+.button {
+  height: 55px;
+  background-color: $buttonBackgroundColor;
+  border: none;
+  border-radius: 5px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: 'Source Sans Pro', sans-serif;
+  box-shadow: 3px 10px 20px 0 rgba(35, 100, 210, 0.3);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover, &:focus {
+    background-color: lighten($buttonBackgroundColor, 10);
+  }
+
+  &:active {
+    background-color: $buttonBackgroundColor;
+  }
+}

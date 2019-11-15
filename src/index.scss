@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,4 +11,11 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+  &:focus {
+    outline: none;
+  }
 }
