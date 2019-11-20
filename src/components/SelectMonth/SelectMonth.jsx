@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { Select } from '../UIKit/Select/Select'
 
 const MONTH_OPTIONS = Array.from(Array(12), (_, index) => {
-  const monthNumber = `0${index + 1}`.slice(-2)
+  const monthNumber = `${index + 1}`.padStart(2, '0')
 
   return (
     <option
       key={monthNumber}
-      value={monthNumber}
+      value={index}
     >
       {monthNumber}
     </option>
@@ -17,12 +17,13 @@ const MONTH_OPTIONS = Array.from(Array(12), (_, index) => {
 })
 
 export const SelectMonth = (props) => {
-  const { label } = props
+  const { label, value, onChange } = props
 
   return (
     <Select
       label={label}
-      defaultValue=''
+      value={value}
+      onChange={onChange}
     >
       <option
         value=''
@@ -37,4 +38,6 @@ export const SelectMonth = (props) => {
 
 SelectMonth.propTypes = {
   label: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 }

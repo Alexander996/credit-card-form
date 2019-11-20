@@ -19,12 +19,13 @@ const YEAR_OPTIONS = Array.from(Array(12), (_, index) => {
 })
 
 export const SelectYear = (props) => {
-  const { label } = props
+  const { label, value, onChange } = props
 
   return (
     <Select
       label={label}
-      defaultValue=''
+      value={value}
+      onChange={onChange}
     >
       <option
         value=''
@@ -39,4 +40,6 @@ export const SelectYear = (props) => {
 
 SelectYear.propTypes = {
   label: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 }

@@ -34,6 +34,8 @@ module.exports = {
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
     "jsx-quotes": ["error", "prefer-single"],
     "comma-dangle": ["error", "always-multiline"],
+    "object-curly-spacing": ["error", "always"],
     "no-trailing-spaces": "error",
+    "no-multi-spaces": "error",
   }
 };
