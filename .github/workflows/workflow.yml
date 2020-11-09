@@ -7,6 +7,6 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: yarn
-      - run: yarn lint
+      - uses: actions/checkout@v2
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint:check

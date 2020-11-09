@@ -1,15 +1,7 @@
-module.exports = {
+{
   "env": {
     "browser": true,
     "es6": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,13 +15,13 @@ module.exports = {
   ],
   "settings": {
     "react": {
-      "version": "detect",
-    },
+      "version": "detect"
+    }
   },
   "rules": {
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "max-len": ["error", 120],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
     "jsx-quotes": ["error", "prefer-single"],
@@ -37,5 +29,8 @@ module.exports = {
     "object-curly-spacing": ["error", "always"],
     "no-trailing-spaces": "error",
     "no-multi-spaces": "error",
+    "eol-last": ["error", "always"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
-};
+}
