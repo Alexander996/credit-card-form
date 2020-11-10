@@ -5,18 +5,21 @@ import classNames from 'classnames'
 import './Input.scss'
 
 export const Input = (props) => {
-  const { label, value, maxLength, onChange } = props
+  const { label, value, type, maxLength, onChange } = props
 
   return (
     <div className={classNames('input__wrapper', props.className)}>
-      <label className='input__label'>
-        {label}
-      </label>
+      {label &&
+        <label className='input__label'>
+          {label}
+        </label>
+      }
       <input
         value={value}
+        type={type}
         maxLength={maxLength}
-        className='input'
         onChange={onChange}
+        className='input'
       />
     </div>
   )
@@ -25,6 +28,7 @@ export const Input = (props) => {
 Input.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
+  type: PropTypes.string,
   maxLength: PropTypes.number,
   className: PropTypes.string,
   onChange: PropTypes.func,

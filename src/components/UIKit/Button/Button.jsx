@@ -5,8 +5,13 @@ import classNames from 'classnames'
 import './Button.scss'
 
 export const Button = (props) => {
+  const { type } = props
+
   return (
-    <button className={classNames('button', props.className)}>
+    <button
+      type={type}
+      className={classNames('button', props.className)}
+    >
       {props.children}
     </button>
   )
@@ -14,5 +19,6 @@ export const Button = (props) => {
 
 Button.propTypes = {
   children: PropTypes.node,
+  type: PropTypes.string,
   className: PropTypes.string,
 }

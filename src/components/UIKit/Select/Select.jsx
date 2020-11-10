@@ -9,14 +9,16 @@ export const Select = (props) => {
 
   return (
     <div className={classNames('select__wrapper')}>
-      <label className='select__label'>
-        {label}
-      </label>
+      {label &&
+        <label className='select__label'>
+          {label}
+        </label>
+      }
       <select
         defaultValue={defaultValue}
         value={value}
-        className='select'
         onChange={onChange}
+        className='select'
       >
         {props.children}
       </select>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import './CardForm.scss'
@@ -12,8 +12,15 @@ import { FormFields } from '../../utils'
 export const CardForm = (props) => {
   const { form } = props
 
+  const onFormSubmit = useCallback((event) => {
+    event.preventDefault()
+  }, [])
+
   return (
-    <div className='card-form'>
+    <form
+      onSubmit={onFormSubmit}
+      className='card-form'
+    >
       <div className='card-form__row'>
         <Input
           label='Card Number'
@@ -44,15 +51,19 @@ export const CardForm = (props) => {
           <Input
             label='CVV'
             value={form[FormFields.CVV]}
+            type='password'
             maxLength={3}
             onChange={(event) => props.setFormValue(FormFields.CVV, event.target.value)}
           />
         </div>
       </div>
-      <Button className='card-form__button'>
+      <Button
+        type='submit'
+        className='card-form__button'
+      >
         Submit
       </Button>
-    </div>
+    </form>
   )
 }
 
